@@ -1,0 +1,6 @@
+# Dépendances du projet SmartLab IoT
+# Installer avec : pip install -r requirements.txt
+
+paho-mqtt==2.1.0   # Client MQTT Python (publisher, subscriber, logger)
+PyMySQL==1.1.1     # Driver Python pour MariaDB
+gpiozero           # Contrôle des GPIO du Raspberry Pi (DEL, boutons, etc.)
