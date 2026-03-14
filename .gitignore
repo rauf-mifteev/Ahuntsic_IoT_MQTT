@@ -1,0 +1,16 @@
+# Environnement virtuel Python (ne pas versionner)
+.venv/
+
+# Fichiers compilés Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Variables d'environnement / secrets
+.env
+
+# Logs générés
+*.log
+
+# Fichiers système macOS
+.DS_Store
