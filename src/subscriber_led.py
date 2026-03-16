@@ -1,5 +1,5 @@
 """
-subscriber_led.py  —  implémentation complète (branche feature/subscriber-led)
+subscriber_led.py  
 ===============================================================================
 Rôle : recevoir une commande JSON sur .../actuators/led/cmd,
        allumer / éteindre la DEL sur GPIO 17,
@@ -24,7 +24,7 @@ from typing import Optional
 import paho.mqtt.client as mqtt
 
 # Sur un Raspberry Pi réel, décommenter la ligne suivante :
-# from gpiozero import LED
+from gpiozero import LED
 
 # ---------------------------------------------------------------------
 # 1) Paramètres
