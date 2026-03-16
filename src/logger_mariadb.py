@@ -1,5 +1,5 @@
 """
-logger_mariadb.py  —  implémentation complète (branche feature/logger-mariadb)
+logger_mariadb.py  
 ===============================================================================
 Rôle : s'abonner à tous les topics de notre équipe,
        classer chaque message (télémétrie capteur ou événement),
