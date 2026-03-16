@@ -1,4 +1,4 @@
--- db/schema.sql  —  implémentation complète (branche feature/logger-mariadb)
+-- db/schema.sql  
 -- =============================================================================
 -- Crée la base de données IoT et ses deux tables.
 -- On peut relancer ce script sans erreur (IF NOT EXISTS).
