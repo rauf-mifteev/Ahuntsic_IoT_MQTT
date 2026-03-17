@@ -79,6 +79,8 @@ def utc_now() -> datetime:
     """
     return datetime.now(timezone.utc).replace(tzinfo=None)
 
+    # return datetime.now()   # heure locale du Pi
+
 def extract_device(topic: str) -> str:
     """
     Extrait le nom du device depuis le topic.
