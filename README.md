@@ -3,8 +3,8 @@
 Projet 1 — AEC IoT, Bloc 3 — Collège Ahuntsic  
 Équipe : **team01** | Pi : **pi01**
 Coauteurs: Rauf Mifteev, Jean-Jacques Arquero
-Le lien vers le dépôt GitHub :
-https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT
+
+Le lien vers le dépôt GitHub : **https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT**
 
 ---
 
