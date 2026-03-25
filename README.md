@@ -2,13 +2,16 @@
 
 Projet 1 — AEC IoT, Bloc 3 — Collège Ahuntsic  
 Équipe : **team01** | Pi : **pi01**
+Coauteurs: Rauf Mifteev, Jean-Jacques Arquero
+Le lien vers le dépôt GitHub :
+https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT
 
 ---
 
 ## Architecture
 
 ```
-+------------------+   MQTT (QoS 0)   +-------------------+   MQTT (sub)   +------------------+
++------------------+   MQTT (QoS 0)    +-------------------+   MQTT (sub)   +------------------+
 |  Raspberry Pi    | ───JSON──────────►|  Mosquitto Broker |───────────────►| logger_mariadb   |
 |                  |   sensors/temp    |  localhost:1883   |                | (Python)         |
 |  publisher_sensor| ───value─────────►|                   |                +──────────────────+
@@ -20,7 +23,7 @@ Projet 1 — AEC IoT, Bloc 3 — Collège Ahuntsic
          │ QoS 1                       |                   |               | table telemetry  |
     actuators/led/state                |                   |               | table events     |
          │                             |                   |               +------------------+
-+------------------+   MQTT (QoS 1)   |                   |
++------------------+   MQTT (QoS 1)    |                   |
 | subscriber_led   | ◄──cmd───────────►|                   | ◄──────────── MQTT Dash (mobile)
 | (Python + GPIO)  |   actuators/led/  |                   |   sub: sensors/temperature/value
 +------------------+                   +-------------------+   pub: actuators/led/cmd
@@ -84,7 +87,7 @@ Commande DEL (depuis MQTT Dash) :
 
 **1. Cloner le dépôt et créer l'environnement virtuel**
 ```bash
-git clone https://github.com/votre-equipe/smartlab.git
+git clone https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT
 cd smartlab
 python3 -m venv .venv
 source .venv/bin/activate
