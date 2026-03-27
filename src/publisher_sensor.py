@@ -60,7 +60,7 @@ def read_sensor() -> float:
         Utile si on n'a pas de capteur branché.
     """
 
-     --- Option A : température CPU du Pi ----------------------------
+    # --- Option A : température CPU du Pi ----------------------------
     try:
         with open("/sys/class/thermal/thermal_zone0/temp") as f:
             return round(int(f.read()) / 1000.0, 2)
