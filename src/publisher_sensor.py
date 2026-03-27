@@ -51,10 +51,24 @@ connected = False
 # ---------------------------------------------------------------------
 def read_sensor() -> float:
     """
-    Simule la lecture d'une température. 
-    Sur un vrai Pi, on pourrait lire /sys/class/thermal/thermal_zone0/temp
+    Retourne la température en °C.
+
+    Option A (Raspberry Pi réel) : lire la température CPU du Pi.
+        Décommenter le bloc ci-dessous et commenter la simulation.
+
+    Option B (simulation) : valeur aléatoire entre 20 et 25 °C.
+        Utile si on n'a pas de capteur branché.
     """
-    return round(random.uniform(20.0, 26.0), 1)
+
+     --- Option A : température CPU du Pi ----------------------------
+    try:
+        with open("/sys/class/thermal/thermal_zone0/temp") as f:
+            return round(int(f.read()) / 1000.0, 2)
+    except OSError:
+        pass   # fichier absent (pas un Pi) → on tombe dans la simulation
+
+    # --- Option B : simulation (valeur par défaut) -------------------
+    # return round(20.0 + random.random() * 5.0, 2)
 
 def build_payload(value: float) -> dict:
     """
