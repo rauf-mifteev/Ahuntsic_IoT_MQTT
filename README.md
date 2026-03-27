@@ -34,10 +34,10 @@ Tous les composants communiquent via un broker Mosquitto qui tourne localement s
 |                  |   status/online   |                   |                    INSERT
 |                  | ───retained──────►|                   |                        ▼
 +------------------+                   |                   |               +------------------+
-         ▲                             |                   |               | MariaDB          |
-         │ QoS 1                       |                   |               | table telemetry  |
-    actuators/led/state                |                   |               | table events     |
-         │                             |                   |               +------------------+
+                                       |                   |               | MariaDB          |
+                                       |                   |               | table telemetry  |
+                                       |                   |               | table events     |
+                                       |                   |               +------------------+
 +------------------+   MQTT (QoS 1)    |                   |
 | subscriber_led   | ◄──cmd───────────►|                   | ◄──────────── MQTT Dash (mobile)
 | (Python + GPIO)  |   actuators/led/  |                   |   sub: sensors/temperature/value
