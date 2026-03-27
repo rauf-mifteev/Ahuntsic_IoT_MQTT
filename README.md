@@ -206,7 +206,7 @@ sudo mariadb iot_b3 < db/queries.sql
 
 ---
 
-## Configuration MQTT Client
+## Configuration du client mobile MQTT (MQTT Dashboard Client sur Android ou IoT OnOff sur iPhone)
 
 1. Trouver l'IP du Pi : `hostname -I` (ex. `192.168.0.42`)
 2. **Add connection** → Host : `192.168.0.42` | Port : `1883` | Client ID : `dash-team01`
