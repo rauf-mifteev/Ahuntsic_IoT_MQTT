@@ -39,7 +39,7 @@ Tous les composants communiquent via un broker Mosquitto qui tourne localement s
                                        |                   |               | table events     |
                                        |                   |               +------------------+
 +------------------+   MQTT (QoS 1)    |                   |
-| subscriber_led   | ◄──cmd───────────►|                   | ◄──────────── MQTT Dash (mobile)
+| subscriber_led   | ◄──cmd───────────►|                   | ◄────────────► MQTT Dash (mobile)
 | (Python + GPIO)  |   actuators/led/  |                   |   sub: sensors/temperature/value
 +------------------+                   +-------------------+   pub: actuators/led/cmd
                                                                sub: actuators/led/state
@@ -103,7 +103,7 @@ Commande DEL (depuis MQTT Dash) :
 **1. Cloner le dépôt et créer l'environnement virtuel**
 ```bash
 git clone https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT
-cd smartlab
+cd Ahuntsic_IoT_MQTT
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
