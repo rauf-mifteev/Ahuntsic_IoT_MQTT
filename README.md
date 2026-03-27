@@ -1,10 +1,25 @@
 # SmartLab — Mini-système IoT supervisé
 
-Projet 1 — AEC IoT, Bloc 3 — Collège Ahuntsic  
-Équipe : **team01** | Pi : **pi01**
 Coauteurs: Rauf Mifteev, Jean-Jacques Arquero
 
 Le lien vers le dépôt GitHub : **https://github.com/rauf-mifteev/Ahuntsic_IoT_MQTT**
+
+## Description
+
+SmartLab est un prototype IoT miniature développé dans le cadre du programme
+AEC IoT du Collège Ahuntsic.
+Il connecte un Raspberry Pi à un tableau de bord mobile via le protocole MQTT,
+permettant la supervision en temps réel d'un capteur et le contrôle à distance
+d'une DEL GPIO.
+
+Le système comprend trois composantes principales qui tournent sur le Pi :
+- un **publisher** qui lit le capteur de température et le diffuse toutes les 2 secondes,
+- un **subscriber** qui reçoit les commandes depuis l'application mobile et pilote la DEL,
+- un **logger** qui enregistre toutes les mesures et événements dans une base MariaDB.
+
+Le tableau de bord mobile (MQTT Dash / IoT OnOff) affiche une jauge de
+température en direct, et un interrupteur pour allumer/éteindre la DEL.
+Tous les composants communiquent via un broker Mosquitto qui tourne localement sur le Pi.
 
 ---
 
